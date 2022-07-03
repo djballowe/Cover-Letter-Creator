@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import edit from "../Images/pencil.svg"
 
 class About extends Component {
   render() {
@@ -15,6 +16,9 @@ class About extends Component {
             egestas semper. Aenean ultricies mi vitae est. Mauris placerat
             eleifend leo.
           </p>
+          <div className="icon-container">
+            <img src={edit} alt="" />
+          </div>
         </div>
       </div>
     );

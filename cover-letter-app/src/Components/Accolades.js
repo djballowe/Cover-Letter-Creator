@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import edit from "../Images/pencil.svg";
 
 class Accolades extends Component {
   render() {
@@ -16,9 +17,12 @@ class Accolades extends Component {
             eleifend leo.
           </p>
         </div>
+        <div className="icon-container">
+          <img src={edit} alt="" />
+        </div>
       </div>
-    )
+    );
   }
 }
 
-export default Accolades
+export default Accolades;

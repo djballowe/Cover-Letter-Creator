@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import edit from "../Images/pencil.svg";
+
 
 export default class Name extends Component {
   render() {

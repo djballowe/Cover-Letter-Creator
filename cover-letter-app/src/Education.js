@@ -9,7 +9,6 @@ export default class Education extends Component {
           <p id="job-title">Made Up University State</p>
           <div className="company-date">
             <p>Bachelors of Fine Arts in Made up Shit</p>
-            
           </div>
           <div>
             <p>

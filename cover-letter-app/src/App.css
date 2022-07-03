@@ -167,12 +167,23 @@ body {
 
 .text-body {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-container-name {
+  color: white;
 }
 
 .image {
@@ -236,7 +247,7 @@ body {
   font-size: 1.3rem;
 }
 
-/* Education */
+
 
 
 

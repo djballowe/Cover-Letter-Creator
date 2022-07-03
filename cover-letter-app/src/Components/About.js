@@ -8,15 +8,16 @@ class About extends Component {
     this.handleClick = this.handleClick.bind(this);
 
     this.state = {
-      about: "",
-      class: "about-form",
+      about:
+        "This is a sample of the About me page. Please edit this and fill out your own information below.",
+      class: "hide",
     };
   }
 
   onSubmitAbout = (e) => {
     e.preventDefault();
     this.setState({
-      class: "about-form",
+      class: "hide",
     });
   };
 

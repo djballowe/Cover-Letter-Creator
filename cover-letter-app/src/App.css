@@ -246,19 +246,6 @@ body {
 
 /* forms */
 
-.about-form {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 30px;
-  position: absolute;
-  border-radius: 8px;
-  bottom: 20px;
-  left: 60px;
-  z-index: 10;
-  display: none;
-}
-
 .about-form-display {
   display: flex;
   flex-direction: column;
@@ -269,6 +256,21 @@ body {
   bottom: 20px;
   left: 60px;
   z-index: 10;
+}
+
+.accolades-form-display {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  position: absolute;
+  border-radius: 8px;
+  bottom: 20px;
+  left: 60px;
+}
+
+.hide {
+  display: none;
 }
 
 .about-form button {

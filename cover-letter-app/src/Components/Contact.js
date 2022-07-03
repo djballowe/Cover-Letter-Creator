@@ -9,13 +9,10 @@ class Contact extends Component {
           <h1>Contact</h1>
         </div>
         <div className="text-body">
-          <p>
-            Pellentesque habitant morbi tristique senectus et netus et malesuada
-            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-            eleifend leo.
-          </p>
+          <p>Phone: 555-555-5555</p>
+          <p>Email: example@example.com</p>
+          <p>Portfolio: examplewebsite/example.com</p>
+          <p>Linkedin: DonSmith/linkedin.com</p>
         </div>
         <div className="icon-container">
           <img src={edit} alt="" />

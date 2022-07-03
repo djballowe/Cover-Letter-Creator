@@ -3,6 +3,10 @@ import About from './Components/About';
 import Accolades from './Components/Accolades';
 import Picture from './Components/Picture';
 import Contact from './Components/Contact';
+import Name from './Components/Name';
+import Work from './Work';
+import Education from './Education';
+import Skills from './Components/Skills';
 
 
 function App() {
@@ -16,7 +20,10 @@ function App() {
           <Contact />
         </div>
         <div className='right'>
-
+          <Name />
+          <Work />
+          <Education />
+          <Skills />
         </div>
       </div>
     </div>

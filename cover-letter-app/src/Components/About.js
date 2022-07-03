@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import edit from "../Images/pencil.svg"
+import AboutForm from "./AboutForm.js"
 
 class About extends Component {
   render() {
@@ -19,6 +20,7 @@ class About extends Component {
           <div className="icon-container">
             <img src={edit} alt="" />
           </div>
+          <AboutForm />
         </div>
       </div>
     );

@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import edit from "../Images/pencil.svg"
-import AboutForm from "./AboutForm.js"
+import edit from "../Images/pencil.svg";
 
 class About extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      about: "",
+    };
+  }
+
   render() {
     return (
       <div className="about">
@@ -20,7 +27,16 @@ class About extends Component {
           <div className="icon-container">
             <img src={edit} alt="" />
           </div>
-          <AboutForm />
+          <form className="about-form" onSubmit={this.handleSubmit}>
+            <textarea
+              name="about"
+              id=""
+              cols="30"
+              rows="10"
+              onChange={this.handleState}
+            ></textarea>
+            <button>Done</button>
+          </form>
         </div>
       </div>
     );

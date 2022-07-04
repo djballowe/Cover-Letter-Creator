@@ -23,21 +23,18 @@ class Contact extends Component {
     })
   }
 
-  handleChange = (e) => {
+  handleChange = (e, props) => {
     this.setState({
       phone: e.target.value,
       email: e.target.value,
       website: e.target.value,
       linkedin: e.target.value,
     })
+    console.log(props)
   }
 
   handleClick = (e) => {
     this.setState({
-      phone: "",
-      email: "",
-      website: "",
-      linkedin: "",
       class: "contact-form-display"
     })
   }
@@ -64,10 +61,10 @@ class Contact extends Component {
             </button>
           </div>
           <form className={info.class} onSubmit={this.onSubmitContact}>
-            <input type="text" placeholder="Phone" onChange={this.handleChange}/>
-            <input type="text" placeholder="Email"/>
-            <input type="text" placeholder="Website"/>
-            <input type="text" placeholder="Linkedin"/>
+            <input type="text" placeholder="Phone" onChange={this.handleChange} name="phone"/>
+            <input type="text" placeholder="Email" name="email"/>
+            <input type="text" placeholder="Website" name="website"/>
+            <input type="text" placeholder="Linkedin" name="linkedin"/>
             <button>Done</button>
           </form>
         </div>

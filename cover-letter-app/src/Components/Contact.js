@@ -23,14 +23,24 @@ class Contact extends Component {
     })
   }
 
-  handleChange = (e, props) => {
-    this.setState({
-      phone: e.target.value,
-      email: e.target.value,
-      website: e.target.value,
-      linkedin: e.target.value,
-    })
-    console.log(props)
+  handleChange = (e) => {
+    if (e.target.name === 'phone') {
+      this.setState({
+        phone: e.target.value
+      })
+    } else if (e.target.name === 'email'){
+      this.setState({
+        email: e.target.value
+      })
+    } else if (e.target.name === 'website'){
+      this.setState({
+        website: e.target.value
+      })
+    } else if (e.target.name === 'linkedin') {
+      this.setState({
+        linkedin: e.target.value
+      })
+    }
   }
 
   handleClick = (e) => {
@@ -62,9 +72,9 @@ class Contact extends Component {
           </div>
           <form className={info.class} onSubmit={this.onSubmitContact}>
             <input type="text" placeholder="Phone" onChange={this.handleChange} name="phone"/>
-            <input type="text" placeholder="Email" name="email"/>
-            <input type="text" placeholder="Website" name="website"/>
-            <input type="text" placeholder="Linkedin" name="linkedin"/>
+            <input type="text" placeholder="Email" onChange={this.handleChange} name="email"/>
+            <input type="text" placeholder="Website" onChange={this.handleChange} name="website"/>
+            <input type="text" placeholder="Linkedin" onChange={this.handleChange} name="linkedin"/>
             <button>Done</button>
           </form>
         </div>

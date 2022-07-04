@@ -4,47 +4,47 @@ import pencil from "../Images/pencil-white.png";
 export default class Name extends Component {
   constructor() {
     super();
-    this.handle = this.handleClick.bind(this)
+    this.handle = this.handleClick.bind(this);
 
     this.state = {
       firstName: "Don",
       lastName: "Smith",
       title: "Web Developer",
-      class: "hide"
+      class: "hide",
     };
   }
 
   onSubmit = (e) => {
     e.preventDefault();
     this.setState({
-      class: "hide"
-    })
-  }
-  
+      class: "hide",
+    });
+  };
+
   handleChange = (e) => {
-    if (e.target.name === 'firstName') {
+    if (e.target.name === "firstName") {
       this.setState({
-        firstName: e.target.value
-      })
-    } else if (e.target.name === 'title') {
+        firstName: e.target.value,
+      });
+    } else if (e.target.name === "title") {
       this.setState({
-        title: e.target.value
-      })
-    } else if (e.target.name === 'lastName') {
+        title: e.target.value,
+      });
+    } else if (e.target.name === "lastName") {
       this.setState({
-        lastName: e.target.value
-      })
+        lastName: e.target.value,
+      });
     }
-  }
+  };
 
   handleClick = (e) => {
     this.setState({
-      class: 'name-form-display'
-    })
-  }
-  
+      class: "name-form-display",
+    });
+  };
+
   render() {
-    const info = this.state
+    const info = this.state;
     return (
       <div className="name-container">
         <div className="icon-container-name">

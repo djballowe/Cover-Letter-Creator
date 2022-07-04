@@ -232,10 +232,14 @@ body {
 /* Experience */
 
 .work-container {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
+}
+
+.experience {
+  text-align: center;
 }
 
 .work-info-container {
@@ -246,7 +250,6 @@ body {
 
 .work-container h2 {
   color: white;
-  margin-bottom: 20px;
 }
 
 .company-date {
@@ -313,6 +316,18 @@ body {
   position: absolute;
   border-radius: 8px;
   top: 30px;
+  right: 30px;
+  z-index: 10;
+}
+
+.work-form-display {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  position: absolute;
+  border-radius: 8px;
+  top: 50px;
   right: 30px;
   z-index: 10;
 }

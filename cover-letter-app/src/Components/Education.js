@@ -11,7 +11,7 @@ export default class Education extends Component {
       degree: "bachelors of Fine Arts in Made up Science",
       description:
         "Academic Honors: Boston University's Metropolitan College Program Achievement Citation (2020), Dean’s List (3 semesters)",
-      class: "hide"
+      class: "hide",
     };
   }
 
@@ -23,20 +23,20 @@ export default class Education extends Component {
   };
 
   handleChange = (e) => {
-    if (e.target.name === 'uni') {
+    if (e.target.name === "uni") {
       this.setState({
         uni: e.target.value,
-      })
-    } else if (e.target.name === 'degree') {
+      });
+    } else if (e.target.name === "degree") {
       this.setState({
         degree: e.target.value,
-      })
-    } else if (e.target.name === 'description') {
+      });
+    } else if (e.target.name === "description") {
       this.setState({
-        description: e.target.value
-      })
+        description: e.target.value,
+      });
     }
-  }
+  };
 
   handleClick = (e) => {
     this.setState({

@@ -53,7 +53,7 @@ export default class Work extends Component {
     const info = this.state;
     return (
       <div className="work-container">
-        <div className="experience">
+        <div className="header-containers">
           <h2>Experience</h2>
         </div>
         <div className="icon-container-name">

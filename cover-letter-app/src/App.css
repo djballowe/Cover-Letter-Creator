@@ -204,11 +204,11 @@ body {
 .name-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   color: white;
   border-bottom: 1px solid white;
   padding-bottom: 30px;
+  position: relative;
 }
 
 .name-container h1 {
@@ -218,6 +218,15 @@ body {
 
 .name-container p {
   margin-top: 20px;
+}
+
+.icon-container-name {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-container-name img {
+  width: 1.7rem;
 }
 
 /* Experience */
@@ -296,6 +305,22 @@ body {
   left: 60px;
 }
 
+.name-form-display {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  position: absolute;
+  border-radius: 8px;
+  top: 30px;
+  right: 30px;
+  z-index: 10;
+}
+
+.name-form-display input {
+  margin: 5px 0;
+}
+
 .hide {
   display: none;
 }
@@ -309,8 +334,3 @@ body {
   border: none;
   cursor: pointer;
 }
-
-
-
-
-

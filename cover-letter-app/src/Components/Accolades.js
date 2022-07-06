@@ -1,71 +1,53 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import edit from "../Images/pencil.svg";
 
-class Accolades extends Component {
-  constructor() {
-    super();
+function Accolades() {
+  const [isActive, setActive] = useState("false");
+  const [Accolades, setAccolades] = useState(
+    "This is a sample of the Accolades section. Please fill out your own information by clicking the button below and submitting"
+  );
 
-    this.handleClick = this.handleClick.bind(this);
+  const ToggleClass = () => {
+    setActive(!isActive);
+  };
 
-    this.state = {
-      accolades:
-        "This is a sample of the Accolades page. Please edit this and fill out any awards or achievements of note here.",
-      class: "hide",
-    };
-  }
-
-  onSubmitAbout = (e) => {
+  const submit = (e) => {
     e.preventDefault();
-    this.setState({
-      class: "hide",
-    });
+    ToggleClass();
   };
 
-  handleChange = (e) => {
-    this.setState({
-      accolades: e.target.value,
-    });
+  const handleChange = (e) => {
+    setAccolades(e.target.value);
   };
 
-  handleClick = (e) => {
-    this.setState({
-      class: "accolades-form-display",
-    });
-  };
-
-  render() {
-    const text = this.state;
-
-    return (
-      <div className="about">
-        <div className="about-text">
-          <h1>Accolades</h1>
-        </div>
-        <div className="text-body">
-          <p>{text.accolades}</p>
-          <div className="icon-container">
-            <button
-              className="edit-button"
-              onClick={this.handleClick}
-              type="submit"
-            >
-              <img src={edit} alt="" />
-            </button>
-          </div>
-          <form className={text.class} onSubmit={this.onSubmitAbout}>
-            <textarea
-              name="accolades"
-              id=""
-              cols="30"
-              rows="10"
-              onChange={this.handleChange}
-            ></textarea>
-            <button>Done</button>
-          </form>
-        </div>
+  return (
+    <div className="about">
+      <div className="about-text">
+        <h1>Accolades</h1>
       </div>
-    );
-  }
+      <div className="text-body">
+        <p>{Accolades}</p>
+        <div className="icon-container">
+          <button className="edit-button" onClick={ToggleClass} type="submit">
+            <img src={edit} alt="" />
+          </button>
+        </div>
+        <form
+          className={isActive ? "hide" : "about-form-display"}
+          onSubmit={submit}
+        >
+          <textarea
+            name="accolades"
+            id=""
+            cols="30"
+            rows="10"
+            onChange={handleChange}
+          ></textarea>
+          <button>Done</button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default Accolades;
